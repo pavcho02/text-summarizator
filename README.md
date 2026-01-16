@@ -1,36 +1,35 @@
-# Text Summarization Console Application (Bulgarian Texts)
+# 📝 Text Summarization Console Application (Bulgarian Texts)
 
-## Project Description
+## 📌 Project Description
 
-This project is a simple console-based text summarization application implemented in Python.
-It performs extractive text summarization using a classic Information Retrieval approach (TF-IDF).
+This project is a **console-based text summarization application** implemented in **Python**.  
+It performs **extractive text summarization** using a **classic Information Retrieval approach (TF-IDF)**.
 
-The application works on Bulgarian-language texts (e.g. news articles from the SemEval dataset) and allows the user to:
+The application works with **Bulgarian-language texts** (e.g. news articles from the **SemEval** dataset) and allows the user to:
+
 - Select a document to summarize
-- Choose the desired summary length (short, medium, long)
-- Generate summaries multiple times without restarting the program
-
-The goal of the project is to demonstrate a simple, interpretable, and language-independent summarization method,
-suitable for a homework(mini course project) assignment.
+- Choose the desired summary length (**short / medium / long**)
+- Generate multiple summaries without restarting the program
 
 ---
 
-## Approach Overview
+## 🧠 Approach Overview
 
-The summarization process follows these steps:
+The summarization process consists of the following steps:
 
 1. The selected document is split into sentences
-2. Each sentence is represented using TF-IDF
-3. Sentences are scored based on the sum of their TF-IDF weights
-4. The top-ranked sentences are selected according to the chosen summary length
+2. Each sentence is represented using **TF-IDF**
+3. Sentences are scored by summing their TF-IDF weights
+4. The top-ranked sentences are selected based on the chosen summary length
 5. The original sentence order is preserved in the final summary
 
-A custom list of Bulgarian stopwords is used to reduce the influence of frequent function words.
+A custom list of **Bulgarian stopwords** is applied to reduce the influence of frequent function words.
 
 ---
 
-## Project Structure
+## 🗂 Project Structure
 
+```
 text-summarization-project/
 │
 ├── summarizer.py          # Main application
@@ -41,113 +40,119 @@ text-summarization-project/
     ├── doc1.txt
     ├── doc2.txt
     └── doc3.txt
+```
 
 ---
 
-## Requirements
+## ⚙️ Requirements
 
-- Python 3.9 or higher
-- pip (Python package manager)
+- **Python 3.9+**
+- **pip** (Python package manager)
 
-### Python Libraries
+### 📦 Python Dependencies
 
-The required libraries are listed in requirements.txt:
-
-nltk  
-numpy  
-scikit-learn  
+```
+nltk
+numpy
+scikit-learn
+```
 
 ---
 
-## Setup Instructions
+## 🚀 Setup Instructions
 
-### 1. Clone or download the project
+### 1️⃣ Download or clone the project
 Place the project folder anywhere on your system.
 
-### 2. (Optional but recommended) Create a virtual environment
+### 2️⃣ (Optional) Create a virtual environment
 
+```bash
 python -m venv venv
+```
 
 Activate it:
 
-Windows:
+**Windows**
+```bash
 venv\Scripts\activate
+```
 
-Linux / macOS:
+**Linux / macOS**
+```bash
 source venv/bin/activate
+```
 
-### 3. Install dependencies
+### 3️⃣ Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-### 4. Download required NLTK resources (one-time setup)
+### 4️⃣ Download required NLTK resources (one-time setup)
 
-Run Python in the terminal:
-
+```bash
 python
+```
 
-Then execute:
-
-import nltk  
-nltk.download("punkt")  
-nltk.download("punkt_tab")  
+```python
+import nltk
+nltk.download("punkt")
+nltk.download("punkt_tab")
 exit()
+```
 
-### 5. Add documents
+### 5️⃣ Add documents
 
-Place your Bulgarian text files (.txt) inside the data/ folder.
-The texts should be UTF-8 encoded and contain plain text only.
+Place Bulgarian text files (`.txt`) in the `data/` folder (UTF-8 encoded).
 
 ---
 
-## Running the Application
+## ▶️ Running the Application
 
-From the project root directory:
-
+```bash
 python summarizer.py
+```
 
 ---
 
-## Example Usage
+## 🖥 Example Usage
 
+```
 Available documents:
 1. doc1.txt
 2. doc2.txt
 
-Choose document number: 1  
-Choose summary length (short / medium / long): short  
+Choose document number: 1
+Choose summary length (short / medium / long): short
 
-========== SUMMARY ==========  
-[Generated summary text here]  
-=============================  
+========== SUMMARY ==========
+[Generated summary text]
+=============================
 
 Summarize another document? (y/n): y
+```
 
 ---
 
-## Summary Length Options
+## 📏 Summary Length Options
 
-short  – very brief summary  
-medium – moderate-length summary  
-long   – more detailed summary
-
----
-
-## Dataset
-
-The documents used in this project are Bulgarian-language texts taken from the SemEval dataset,
-which is commonly used for research and evaluation in Natural Language Processing tasks.
+| Option  | Description |
+|-------|-------------|
+| short  | Very brief summary |
+| medium | Moderate-length summary |
+| long   | More detailed summary |
 
 ---
 
-## Key Characteristics
+## 📚 Dataset
 
-- Console-based interface
-- Classic IR-based summarization (TF-IDF)
-- Language-aware preprocessing (Bulgarian stopwords)
+The documents are **Bulgarian-language texts** taken from the **SemEval dataset**, commonly used in NLP research.
 
 ---
 
-## Academic Note
+## 🧑‍🎓 Academic Note
 
-This project was developed as a homework(mini course project) assignment for an Information Retrieval 2025/2026.
+This project was developed as a **mini course assignment** for an **Information Retrieval 2025/2026** course.
+
+
+This application demonstrates how **basic Information Retrieval techniques** can be applied to **text summarization** using a lightweight and transparent approach.
